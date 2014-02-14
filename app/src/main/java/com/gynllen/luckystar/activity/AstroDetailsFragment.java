@@ -63,10 +63,10 @@ public class AstroDetailsFragment extends Fragment {
         String typeString = "";
         if (type == GetTypeOfAstro.TODAY.name()){
             current_time = sharedPref.getInt(name + Utils.PREFERENCE_TODAY_TIME, -1);
-            typeString = Utils.PREFERENCE_TODAY;
+            typeString = name + Utils.PREFERENCE_TODAY;
         } else if (type == GetTypeOfAstro.TOMORROW.name()){
             current_time = sharedPref.getInt(name + Utils.PREFERENCE_TOMMOROW_TIME, -1);
-            typeString = Utils.PREFERENCE_TOMMOROW;
+            typeString = name + Utils.PREFERENCE_TOMMOROW;
         }
 
         if (current_time == -1 || current_time != Utils.CURRENT_TIME){
